@@ -1,0 +1,51 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+nav {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    margin-top: 4%;
+    margin-right: 10%;
+    text-align: right;
+}
+.btn_wrapper {
+    display: inline-block;
+    position: relative;
+    margin-right: 10%;
+}
+.main_btn {
+    display: inline-block;
+    margin: 5px;
+}
+
+.btn {
+    width: auto;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    padding: 10px;
+    margin: 15px;
+    cursor: pointer;
+    display: inline-block;
+    color: black;
+}
+
+.active {
+    color: #77716d;
+}
+
+.btn:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    border-bottom: 1.5px solid black;
+    transition: all 1s ease-out;
+}
+.btn:hover:before {
+    width: 100%;
+    transition: all 0.5s ease-Out;
+}
