@@ -1,8 +1,5 @@
 /* Importing Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-.error {
-    visibility: hidden;
-}
 
 nav {
     position: relative;
@@ -62,13 +59,3 @@ nav {
 
 }
 
-/* Mobile Optimization */
-@media only screen and (max-width: 414px) {
-    * {
-        visibility: hidden;
-    }
-
-    .error {
-        visibility: visible;
-    }
-}
