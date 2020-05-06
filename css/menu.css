@@ -6,8 +6,10 @@ nav {
     width: 100%;
     height: 100px;
     margin-top: 4%;
-    margin-right: 10%;
     text-align: right;
+}
+.btn_container {
+    margin-right: 5%;
 }
 .btn_wrapper {
     display: inline-block;
@@ -23,9 +25,9 @@ nav {
     width: auto;
     text-align: center;
     font-family: 'Playfair Display', serif;
-    font-size: 20px;
+    font-size: 18px;
     padding: 10px;
-    margin: 15px;
+    margin: 10px;
     cursor: pointer;
     display: inline-block;
     color: black;
@@ -48,4 +50,21 @@ nav {
 .btn:hover:before {
     width: 100%;
     transition: all 0.5s ease-Out;
+}
+
+/* Ultrade Optimization */
+@media only screen and (min-width: 2560px) {
+    .btn {
+        font-size: 20px;
+    }
+    .btn_container {
+        margin-right: 0px;
+    }
+}
+
+/* Mobile Optimization */
+@media only screen and (max-width: 414px) {
+    nav {
+        visibility: hidden;
+    }
 }
