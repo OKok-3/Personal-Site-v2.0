@@ -10,19 +10,25 @@ html {
     max-height: 100vh;
 }
 body {
-    position: relative;
+    position: flex;
     margin: 0 auto;
-    max-width: 1900px;  /* To prevent the werid effects on ultrawide monitors */
-    background-color: rgba(221, 215, 190, 0.644);
+    width: 100vw;
+    height: 95vh;  /* leaves some blank space at the bottom of the page */
+    background-color: rgba(221, 215, 190, 0.5);
+}
+header {
+    position: absolute;
+    width: 100vw;
+    height: 80px;
 }
 
 
 /* Landing Page (index.html) Settings */
 .main_text_wrapper {
     display: inline-block;
-    position: relative;
-    margin-top: 30%;
-    margin-left: 10%;
+    position: absolute;
+    left: 10%;
+    bottom: 23%;
 }
 .main_text {
     font-family: 'Josefin Slab', serif;
@@ -43,15 +49,14 @@ body {
     }
 }
 
-/* Ultrawide Screen Optimization */
+/* Ultrawide Monitor Optimization */
 @media only screen and (min-width: 2560px) {
     .main_text_wrapper {
         margin-left: 0;
         margin-right: 0;
         margin-top: 33%;
     }
-
     .main_text {
-        font-size: 35px;
+        font-size: 30px;
     }
 }
