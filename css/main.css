@@ -42,15 +42,11 @@ header {
 
 /* Mobile Screen Optimization */
 @media only screen and (max-width: 414px) {
-    * {
+    nav {
         visibility: hidden;
     }
-    .error {
-        visibility: visible;
-        position: relative;
-        top: 10%;
-        left: 10%;
-        width: 80%;
+    .main_text {
+        font-size: 20px;
     }
 }
 
