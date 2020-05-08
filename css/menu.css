@@ -54,6 +54,16 @@ nav {
 .hamburger {
     visibility: hidden;
 }
+
+/* Ultrawide Optimization */
+@media only screen and (min-width: 2561px) {
+    .nav-links {
+        margin-right: 4%;
+        margin-top: 1%;
+        width: 30%;
+    }
+}
+
 /* Mobile Optimization */
 @media only screen and (max-width: 1024px) {
    .hamburger {
