@@ -12,6 +12,10 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
+var tl_2 = gsap.timeline({repeat:-1, yoyo:true, repeatDelay:0.5, delay: 3});
+  tl_2.to(".main-text-wrapper", {duration: 5, ease: "elastic.inOut(3, 1)", y:"40%", stagger: 0.2}, 1);
+
+
 function desktopLandingAnimation() {
   gsap.from(".main-text-wrapper", {duration: 3, ease: "elastic.out(0.6, 0.5)", y: 100, opacity: 0, delay: 0.5, stagger: 0.2});
   gsap.from("#nav-animation-wrapper", {duration: 3, ease: "elastic.out(0.6, 0.5)", y: -100, opacity: 0, delay: 0.5, stagger: 0.2});
