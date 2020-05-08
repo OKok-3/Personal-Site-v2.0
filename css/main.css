@@ -1,0 +1,15 @@
+/* === Global CSS Styling Rules === */
+
+
+/* Clear out all the paddgins and margins -- a reset if you may*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    background: #978a75;
+}

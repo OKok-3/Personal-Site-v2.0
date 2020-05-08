@@ -1,0 +1,70 @@
+/* === CSS file for the menu === */
+
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+
+
+nav {
+    height: 10vh;
+}
+
+
+.nav_links {
+    display: flex;
+    list-style: none;
+    width: 50%;
+    height: 100%;
+    margin-left: auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.nav_link .link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+
+/* Mobile Optimization */
+@media only screen and (max-width: 768px) {
+    nav {
+        position: relative;
+    }
+
+    .hamburger {
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -20%);
+        z-index: 2;
+    }
+
+    .line {
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+    }
+
+
+    .nav_links {
+        position: fixed;
+        background: black;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(100px at 400% 100%);
+        -webkit-clip-path: circle(100px at 400% 100%);
+        transition: all 1s ease-out;
+    }
+
+
+    .nav_links.open {
+        clip-path: circle(3000px at 400% 100%);
+        -webkit-clip-path: circle(300px at 400% 100%);
+    }
+}
