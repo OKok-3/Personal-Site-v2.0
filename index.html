@@ -5,28 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/menu.css">
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
     <title>daniel | personal website v2.0</title>
 </head>
 <body>
-    <script src="js/animations.js"></script>
     <nav>
-        <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+        <!-- Mobile Hamburger Button -->
+        <button class="hamburger" onclick="showMenu()">
+            <div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </button>
+        <!-- Menu Items -->
+        <div class="nav-links-wrapper" id="nav-links-wrapper">
+            <ul class="nav-links">
+                <div class="active-wrapper" id="nav-animation-wrapper">
+                    <li class="nav-link"><a href="index.html" class="link active_link">Home</a></li>
+                </div>
+                <div id="nav-animation-wrapper">
+                    <li class="nav-link"><a href="subpages/projects.html" class="link">Projects</a></li>
+                </div>
+                <div id="nav-animation-wrapper">
+                    <li class="nav-link"><a href="subpages/experiences.html" class="link">Experiences</a></li>
+                </div>
+                <div id="nav-animation-wrapper">
+                    <li class="nav-link"><a href="subpages/more_about_me.html" class="link">About Me</a></li>
+                </div>
+            </ul>
         </div>
-        <ul class="nav_links">
-            <li class="nav_link"><a href="#" class="link">Home</a></li>
-            <li class="nav_link"><a href="#" class="link">Projects</a></li>
-            <li class="nav_link"><a href="#" class="link">Experiences</a></li>
-            <li class="nav_link"><a href="#" class="link">About Me</a></li>
-        </ul>
+        
+
     </nav>
 
-    <main>
-        <h1 class="main_text">hi, I'm daniel!</h1>
-        <h1 class="main_text">Second Year Student at the University of Toronto</h1>
+    <main class="main-text-container">
+        <!-- The wrapper below is for animation purposes -->
+        <div class="main-text-wrapper">
+            <h1 class="main-text">hi, I'm daniel!</h1>
+        </div>
+        <div class="main-text-wrapper">
+            <h1 class="main-text">a second year student at the University of Toronto</h1>
+        </div>
     </main>
 </body>
 </html>
+<script src="../js/animations.js"></script>

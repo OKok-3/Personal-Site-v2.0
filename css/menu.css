@@ -1,70 +1,95 @@
 /* === CSS file for the menu === */
-
 /* Importing Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
 
 
 nav {
-    height: 10vh;
+    height: 12vh;
 }
 
-
-.nav_links {
+.nav-links {
     display: flex;
     list-style: none;
-    width: 50%;
+    width: 40%;
     height: 100%;
     margin-left: auto;
     justify-content: space-around;
     align-items: center;
 }
 
-
-.nav_link .link {
-    color: white;
+.link {
+    color: black;
     text-decoration: none;
     font-size: 18px;
     font-family: 'Titillium Web', sans-serif;
 }
 
+/* Distinguishes which page the user is on */
+.active_link {
+    /* Sets the text color to grey and puts a line under the text */
+    color: #0000007e;
+}
+/* Animations */
+#nav-animation-wrapper {
+    position: relative;
+    width: auto;
+    height: auto;
+}
+#nav-animation-wrapper:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    border-bottom: 1.5px solid black;
+    transition: all 1.5s ease-out;
+}
+#nav-animation-wrapper:hover:before {
+    width: 100%;
+    transition: all 0.5s ease-out;
+}
 
+
+.hamburger {
+    visibility: hidden;
+}
 /* Mobile Optimization */
-@media only screen and (max-width: 768px) {
-    nav {
-        position: relative;
-    }
-
-    .hamburger {
-        position: absolute;
-        cursor: pointer;
-        right: 5%;
-        top: 50%;
-        transform: translate(-5%, -20%);
-        z-index: 2;
-    }
-
-    .line {
-        width: 30px;
-        height: 3px;
-        background: white;
-        margin: 5px;
-    }
-
-
-    .nav_links {
+@media only screen and (max-width: 1024px) {
+   .hamburger {
+        display: flex;
+        visibility: visible;
+        justify-content: space-around;
+        align-items: center;
         position: fixed;
-        background: black;
-        height: 100%;
-        width: 100%;
+        right: 20px;
+        top: 20px;
+        background: rgb(0, 0, 0);
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 1;
+   }
+   .line {
+       width: 30px;
+       height: 3px;
+       background: white;
+       margin: 6px;
+   }
+   .link {
+       color: white;
+   }
+   .nav-links-wrapper {
+       visibility: hidden;
+   }
+   .nav-links {
+        position: fixed;
+        display: flex;
         flex-direction: column;
-        clip-path: circle(100px at 400% 100%);
-        -webkit-clip-path: circle(100px at 400% 100%);
-        transition: all 1s ease-out;
-    }
-
-
-    .nav_links.open {
-        clip-path: circle(3000px at 400% 100%);
-        -webkit-clip-path: circle(300px at 400% 100%);
-    }
+        background: black;
+        width: 100%;
+        height: 100%;
+   }
 }

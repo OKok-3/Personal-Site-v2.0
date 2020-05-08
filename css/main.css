@@ -1,5 +1,8 @@
 /* === Global CSS Styling Rules === */
 
+/* Importin Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@300&display=swap');
+
 
 /* Clear out all the paddgins and margins -- a reset if you may*/
 * {
@@ -8,8 +11,30 @@
     box-sizing: border-box;
 }
 
-
-
 body {
-    background: #978a75;
+    display: flex;
+    flex-direction: column;
+    background: #f3e4cb;
+    max-width: 2560px;
+    margin-left: auto;
+}
+
+.main-text-container {
+    display: inline-block;
+    position: absolute;
+    width: auto;
+    height: auto;
+    bottom: 20%;
+    left: 10%;
+}
+
+.main-text {
+    font-size: 28px;
+    font-family: 'Saira', sans-serif;
+}
+
+@media only screen and (max-width: 1024px) {
+    .main-text {
+        font-size: 20px;
+    }
 }
