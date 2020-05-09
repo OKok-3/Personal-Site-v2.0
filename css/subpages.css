@@ -1,0 +1,79 @@
+/* CSS for subpage projects and experiences */
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+
+.subpage-container {
+    position: relative;
+    height: 85%;
+    width: 95%;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+.card-container {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    display: flex;
+}
+.subpage-desc {
+    display: inline-block;
+}
+.subpage-desc-title {
+    position: relative;
+    display: inline-block;
+    margin-top: 5%;
+    margin-left: 10%;
+    font-family: 'Playfair Display', serif;
+    font-size: 55px;
+    color: black;
+}
+.subpage-desc-txt {
+    position: relative;
+    display: inline-block;
+    margin-left: 10%;
+    margin-right: 5%;
+    margin-top: 5%;
+    line-height: 1.5;
+    word-wrap: break-word;
+    font-family: 'Dosis', sans-serif;
+    font-size: 20px;
+}
+
+.card-wrapper {
+    position: relative;
+    height: 85%;
+    width: 80%;
+    margin: auto;
+    padding: 0px;
+    display: grid;
+    grid-template-rows: 0.5fr 0.5fr;
+    box-shadow: 20px 0px 60px rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+    position: relative;
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .subpage-desc-wrapper {
+        height: 35%;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .subpage-desc-wrapper {
+        height: 40%;
+    }
+    .subpage-desc-title {
+        font-size: 40px;
+    }
+    .subpage-desc-txt {
+        font-size: 16px;
+    }
+}

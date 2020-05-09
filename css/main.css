@@ -64,7 +64,7 @@ body {
     width: 90%;
     height: 85%;
     max-width: 650px;
-    margin: auto 0;
+    margin: auto auto;
     margin-right: 30px;
 }
 .sub-img {
@@ -204,5 +204,25 @@ body {
     }
     .sub-reveal {
         padding-top: 0px;
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .main-container {
+        grid-template-columns: none;
+        grid-template-rows: 0.5fr 0.5fr;
+    }
+    .sub-wrapper {
+        order: 1;
+    }
+    .main-wrapper {
+        order: 2;
+    }
+    .main-text-container {
+        top: 50%;
+    }
+    .sub-content {
+        display: none;
     }
 }
