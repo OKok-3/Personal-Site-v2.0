@@ -2,36 +2,171 @@
 
 /* Importin Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Saira:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 /* Clear out all the paddgins and margins -- a reset if you may*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-user-select: none;
+}
+p, h1, h3 {
+    -webkit-user-select: none;
+}
+html {
+    width: 100%;
+    height: 100%;
 }
 
 body {
-    display: flex;
+    height: 100%;
+    width: 90%;
+    max-width: 2200px;
     flex-direction: column;
-    background: #f3e4cb;
-    max-width: 2560px;
-    margin-left: auto;
+    background: #ffffff;
+    margin: auto;
 }
-
+/* The Bottom part of the grid */
+.main-container {
+    position: relative;
+    display: grid;
+    height: 85%;
+    grid-template-columns: 0.5fr 0.5fr;
+    overflow: hidden;
+}
+/* Wrapper that wraps tightly around the texts */
 .main-text-container {
-    display: inline-block;
-    position: absolute;
-    width: auto;
+    position: relative;
     height: auto;
-    bottom: 20%;
-    left: 10%;
+    width: auto;
+    top: 70%;
+    left: 5%;
 }
-
+/* Individual lines of text */
 .main-text {
-    font-size: 28px;
+    font-size: 24px;
     font-family: 'Saira', sans-serif;
 }
+
+/* The subsection of the landing page */
+.sub-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.sub-content {
+    display: inline-block;
+    flex-direction: column;
+    width: 90%;
+    height: 85%;
+    max-width: 650px;
+    margin: auto 0;
+    margin-right: 30px;
+}
+.sub-img {
+    background-image: url(/resources/backgrounds/project.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    filter: blur(3.5px);
+    width: 100%;
+    height: 100%;
+    margin: auto 0;
+    transition: 0.5s filter ease-in-out;
+    border-radius: 10px;
+}
+.sub-text {
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    width: 100%;
+    bottom: 50%;
+    font-size: 35px;
+    font-family: 'Montserrat', sans-serif;
+    transition: 1s all ease-in-out;
+}
+.sub-hover-txt {
+    position: relative;
+    bottom: 50%;
+    color: white;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    transition: 1s all ease-in-out;
+    transition: 1s all ease-in-out;
+}
+/* The contents which show up after hover */
+.sub-reveal {
+    position: absolute;
+    bottom: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+    height: 70%;
+    padding: 30px;
+    transform: translateY(400px);
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+.sub-desc-wrapper {
+    position: relative;
+    padding: 5px;
+}
+.sub-desc {
+    position: relative;
+    text-align: left;
+    color: white;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+.sub-ctas {
+    position: relative;
+    width: 99%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+.sub-cta {
+    text-decoration: none;
+    font-family: 'Saira', sans-serif;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid white;
+    transition: 0.2s all ease-in-out;
+}
+
+/* Animation for hovering on the subpage */
+.sub-content:hover .sub-img {
+    filter: blur(10px);
+}
+.sub-content:hover .sub-text {
+    bottom: 80%;
+    transform: scale(1.3);
+    transition: 1s all ease-in-out;
+}
+.sub-content:hover .sub-hover-txt {
+    opacity: 0;
+    transform: translateY(100px);
+}
+.sub-content:hover .sub-reveal {
+    opacity: 1;
+    transform: translateY(-1px);
+}
+.sub-cta:hover {
+    background-color: white;
+    color: black;
+    transition: 0.2s all ease-in-out;
+}
+
 
 /* Ultrawide Optimization */
 @media only screen and (min-width: 2561px) {
@@ -41,8 +176,33 @@ body {
 }
 
 /* Mobile Optimization */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1366px) {
     .main-text {
         font-size: 20px;
+    }
+    /* Animation Adjustments */
+    .sub-text-wrapper {
+        position: relative;
+        bottom: 50%;
+        transition: 1s bottom ease-in-out;
+    }
+    .sub-desc {
+        font-size: 17px;
+    }
+    .sub-hover-text, span {
+        display: none;
+    }
+    .sub-hover-txt:after {
+        content: "Hold for details";
+    }
+    .sub-content:hover .sub-text-wrapper {
+        bottom: 80%;
+        transition: 1s all ease-in-out;
+    }
+    .sub-content:hover .sub-text {
+        transform: scaleX(1.2);
+    }
+    .sub-reveal {
+        padding-top: 0px;
     }
 }
