@@ -3,6 +3,7 @@
 /* Importin Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Saira:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 
 /* Clear out all the paddgins and margins -- a reset if you may*/
 * {
@@ -18,11 +19,10 @@ html {
     width: 100%;
     height: 100%;
 }
-
 body {
     height: 100%;
     width: 90%;
-    max-width: 2200px;
+    max-width: 2560px;
     flex-direction: column;
     background: #ffffff;
     margin: auto;
@@ -63,7 +63,8 @@ body {
     flex-direction: column;
     width: 90%;
     height: 85%;
-    max-width: 650px;
+    max-width: 850px;
+    max-height: 850px;
     margin: auto auto;
     margin-right: 30px;
 }
@@ -150,7 +151,7 @@ body {
 }
 .sub-content:hover .sub-text {
     bottom: 80%;
-    transform: scale(1.3);
+    transform: scale(1.1);
     transition: 1s all ease-in-out;
 }
 .sub-content:hover .sub-hover-txt {

@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   gsap.from("#subpage-desc", {duration: 3, ease: "elastic.out(0.6, 0.5)", y: 100, opacity: 0, delay: 0.5, stagger: 0.2});
   gsap.from(".card-container", {duration: 3, ease: "elastic.out(0.6, 0.5)", y: 100, opacity: 0, delay: 1, stagger: 0.2});
-  gsap.to(".card-container", {duration: 10, ease: "elastic.inOut(3, 1)", y:"-5%", stagger: 0.2, repeat: -1, yoyo: true, delay: 5});
+  gsap.to(".card-container", {duration: 10, ease: "elastic.inOut(3, 1)", y:"-3%", stagger: 0.3, repeat: -1, yoyo: true, delay: 5});
 });
 
 
