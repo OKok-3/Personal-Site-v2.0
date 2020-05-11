@@ -22,7 +22,7 @@ html {
 body {
     height: 100%;
     width: 90%;
-    max-width: 2560px;
+    max-width: 1900px;
     flex-direction: column;
     background: #ffffff;
     margin: auto;
@@ -63,8 +63,8 @@ body {
     flex-direction: column;
     width: 90%;
     height: 85%;
-    max-width: 850px;
-    max-height: 850px;
+    max-width: 800px;
+    max-height: 800px;
     margin: auto auto;
     margin-right: 30px;
 }
@@ -111,6 +111,7 @@ body {
     margin: auto;
     height: 70%;
     padding: 30px;
+    word-wrap: break-word;
     transform: translateY(400px);
     opacity: 0;
     transition: 1s all ease-in-out;
@@ -151,12 +152,11 @@ body {
 }
 .sub-content:hover .sub-text {
     bottom: 80%;
-    transform: scale(1.1);
     transition: 1s all ease-in-out;
 }
 .sub-content:hover .sub-hover-txt {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(90px);
 }
 .sub-content:hover .sub-reveal {
     opacity: 1;
@@ -179,7 +179,7 @@ body {
 /* Mobile Optimization */
 @media only screen and (max-width: 1366px) {
     .main-text {
-        font-size: 20px;
+        font-size: 18px;
     }
     /* Animation Adjustments */
     .sub-text-wrapper {
@@ -201,7 +201,7 @@ body {
         transition: 1s all ease-in-out;
     }
     .sub-content:hover .sub-text {
-        transform: scaleX(1.2);
+        transform: none;
     }
     .sub-reveal {
         padding-top: 0px;
@@ -209,10 +209,10 @@ body {
 }
 
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
     .main-container {
         grid-template-columns: none;
-        grid-template-rows: 0.5fr 0.5fr;
+        grid-template-rows: none;
     }
     .sub-wrapper {
         order: 1;
