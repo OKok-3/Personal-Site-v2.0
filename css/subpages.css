@@ -5,7 +5,7 @@
 
 .subpage-container {
     position: relative;
-    height: 85%;
+    height: 90%;
     width: 95%;
     margin-left: auto;
     display: flex;
@@ -35,6 +35,28 @@
 }
 .subpage-desc-text {
     position: relative;
+    margin-top: 25px;
+    margin-right: 10px;
     font-size: 20px;
     font-family: 'Dosis', sans-serif;
+}
+
+/* Optimization for tablets like iPad Pro 12 inch */
+@media only screen and (max-width: 1366px) {
+    .subpage-content-container {
+        margin: 19px;
+    }
+}
+/* Optimization for smaller tablets */
+@media only screen and (max-width: 1112px) {
+    .subpage-content-container {
+        margin: 52px;
+    }
+}
+/* Optimization for portrait tablets */
+@media only screen and (max-width: 1000px) {
+    .subpage-content-container {
+        margin: 20px 3px;
+        transform: scale(0.96);
+    }
 }

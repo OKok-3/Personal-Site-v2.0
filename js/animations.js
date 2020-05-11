@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
     gsap.to(".main-text-wrapper", {duration: 5, ease: "elastic.inOut(3, 1)", y:"-20%", stagger: 0.2, repeat: -1, yoyo: true, delay: 5}, 1);
   }
   gsap.from("#subpage-desc", {duration: 3, ease: "elastic.out(0.6, 0.5)", y: 100, opacity: 0, delay: 0.5, stagger: 0.2});
+  gsap.from(".card-wrapper", {duration: 3, ease: "elastic.out(0.6, 0.8)", y: 100, opacity: 0, delay: 0.7, stagger: 0.1});
 });
 
 
@@ -29,14 +30,16 @@ function showMenu() {
   var navLinks = document.getElementById("nav-links-wrapper");
   if (navLinks.style.visibility === 'visible') {
     var tl = gsap.timeline({onComplete: function() {navLinks.style.visibility = 'hidden'}});
-    tl.to("#nav-links-wrapper", {duration: 0.5, opacity: 0});
-    tl.to(".sub-content", {duration: 0.5, opacity: 1});
+    tl.to("#nav-links-wrapper", {duration: 0.3, opacity: 0});
+    tl.to(".sub-content", {duration: 0.3, opacity: 1});
+    tl.to(".subpage-content-container", {duration: 0.2, opacity: 1}, 1);
   } else {
     navLinks.style.visibility = 'visible';
     navLinks.style.opacity = 0.0;
     var tl = gsap.timeline();
-    tl.to("#nav-links-wrapper", {duration: 0.4, opacity: 1}, 1)
-    tl.from("#nav-animation-wrapper", {duration: 1, ease: "elastic.out(0.3, 0.5)", y: -100, opacity: 0, stagger: 0.2}, 1.5);
+    tl.to("#nav-links-wrapper", {duration: 0.3, opacity: 1}, 1)
+    tl.from("#nav-animation-wrapper", {duration: 1, ease: "elastic.out(0.3, 0.5)", y: -100, opacity: 0, stagger: 0.2}, 1);
     tl.to(".sub-content", {duration: 0.1, opacity: 0}, 1);
+    tl.to(".subpage-content-container", {duration: 0.2, opacity: 0}, 1);
   }
 }

@@ -1,8 +1,8 @@
 /* Styling for Cards */
 /* Importing Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 
 
 .card-wrapper {
@@ -50,6 +50,8 @@
     position: relative;
     padding: 15px;
     padding-bottom: 0px;
+    font-size: 18px;
+    word-wrap: break-word;
     font-family: 'Crimson Text', serif;
 }
 
@@ -97,4 +99,10 @@
 .card-stat-detail:hover {
     filter: invert(100%);
     transition: 0.2s filter ease-in-out;
+}
+
+@media only screen and (max-width: 1366px) {
+    .card-info-text {
+        font-size: 17px;
+    }
 }
