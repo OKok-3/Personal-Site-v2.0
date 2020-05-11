@@ -148,7 +148,7 @@ body {
 
 /* Animation for hovering on the subpage */
 .sub-content:hover .sub-img {
-    filter: blur(10px);
+    filter: blur(7px);
 }
 .sub-content:hover .sub-text {
     bottom: 80%;
