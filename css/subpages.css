@@ -20,6 +20,13 @@
     flex-basis: 350px;
     margin: 30px;
 }
+/* Different setting for experiences page */
+.exp-subpage-content-container {
+    position: relative;
+    height: 600px;
+    flex-basis: 350px;
+    margin: 30px;
+}
 
 .subpage-desc-wrapper {
     position: relative;
