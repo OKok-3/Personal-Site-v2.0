@@ -51,12 +51,12 @@
 /* Optimization for tablets like iPad Pro 12 inch */
 @media only screen and (max-width: 1366px) {
     .subpage-content-container {
-        transform: scale(0.92);
-        margin: 0;
+        transform: scale(0.90);
+        margin: -8px;
     }
     .exp-subpage-content-container {
-        transform: scale(0.92);
-        margin: 0;
+        transform: scale(0.90);
+        margin: -8px;
     }
 }
 
@@ -64,6 +64,6 @@
 @media only screen and (max-width: 1000px) {
     .subpage-content-container {
         margin: 20px 0px;
-        transform: scale(0.96);
+        transform: scale(0.90);
     }
 }
