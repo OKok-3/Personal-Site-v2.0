@@ -36,6 +36,7 @@ nav {
     font-family: 'Jost', sans-serif;
     font-size: 20px;
     opacity: 0.2;
+    z-index: -1;
 }
 
 /* Distinguishes which page the user is on */
