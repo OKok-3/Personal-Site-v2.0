@@ -38,7 +38,7 @@ function mobileLandingAnimation() {
   // Menu Button Animations
   tl_m.from("#mobile-menu", {duration: 3, ease: "elastic.out(0.6, 0.5)", y: -100, opacity: 0.015, stagger: 0.2, onComplete: disable_preloader()}, 1);
   // For index page main texts
-  tl_m.from(".main-text-wrapper", {duration: 3, ease: "elastic.out(0.6, 0.5)", y: 100, opacity: 0.015, delay: 0.5, stagger: 0.2}, 1);
+  tl_m.from(".main-text-wrapper", {duration: 3, ease: "elastic.out(0.6, 0.5)", y: 100, opacity: 0.015, delay: 0.5, stagger: 0.2}, 2);
   // For sub contents
   tl_m.from(".sub-content", {duration: 0.5, opacity: 0.015}, 2);
 }
@@ -52,8 +52,8 @@ function showMenu() {
   var navLinks = document.getElementById("nav-links-wrapper");
   if (navLinks.style.visibility === 'visible') {
     var tl = gsap.timeline({onComplete: function() {navLinks.style.visibility = 'hidden'}});
-    tl.to("#nav-links-wrapper", {duration: 0.2, opacity: 0});
-    tl.to(".sub-content", {duration: 0.2, opacity: 1});
+    tl.to("#nav-links-wrapper", {duration: 0.2, opacity: 0}, 1);
+    tl.to(".sub-content", {duration: 1, opacity: 1}, 2);
     tl.to(".subpage-content-container", {duration: 0.2, opacity: 1}, 1);
     tl.to(".exp-subpage-content-container", {duration: 0.2, opacity: 1}, 1);
   } else {
@@ -61,7 +61,7 @@ function showMenu() {
     navLinks.style.opacity = 0.0;
     var tl = gsap.timeline();
     tl.to("#nav-links-wrapper", {duration: 0.2, opacity: 1}, 1)
-    tl.from("#nav-animation-wrapper", {duration: 1, ease: "elastic.out(0.3, 1)", y: -100, opacity: 0, stagger: 0.2}, 1);
+    tl.from("#nav-animation-wrapper", {duration: 1, ease: "elastic.out(0.3, 1)", y: -100, opacity: 0.01, stagger: 0.2}, 1);
     tl.to(".sub-content", {duration: 0.1, opacity: 0}, 1);
     tl.to(".subpage-content-container", {duration: 0.2, opacity: 0}, 1);
     tl.to(".exp-subpage-content-container", {duration: 0.2, opacity: 0}, 1);
