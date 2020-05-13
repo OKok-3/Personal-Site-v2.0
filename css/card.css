@@ -103,8 +103,9 @@
 
 /* Different setting for experiences page */
 .exp-card-cover-img {
-    position: block;
-    max-height: 100%;
+    position: relative;
+    max-height: 214.28px;
+    max-width: 100%;
     width: 100%;
     transform: scale(0.8);
     object-fit: contain;

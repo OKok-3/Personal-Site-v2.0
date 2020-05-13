@@ -2,8 +2,10 @@
 
 .preloader-container {
     position: absolute;
-    width: 100%;
     height: 100%;
+    width: 100%;
+    margin-left: 100px;
+    max-width: 2000px;
     background-color: white;
     z-index: 99;
     display: flex;

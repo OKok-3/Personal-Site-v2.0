@@ -16,14 +16,14 @@
 
 .subpage-content-container {
     position: relative;
-    height: 500px;
+    height: 550px;
     flex-basis: 350px;
     margin: 30px;
 }
 /* Different setting for experiences page */
 .exp-subpage-content-container {
     position: relative;
-    height: 600px;
+    height: 660px;
     flex-basis: 350px;
     margin: 30px;
 }
@@ -63,7 +63,7 @@
 /* Optimization for portrait tablets */
 @media only screen and (max-width: 1000px) {
     .subpage-content-container {
-        margin: 20px 3px;
+        margin: 20px 0px;
         transform: scale(0.96);
     }
 }

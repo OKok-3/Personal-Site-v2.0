@@ -16,13 +16,14 @@ p, h1, h3 {
     -webkit-user-select: none;
 }
 html {
-    width: 100%;
+    max-width: 2000px;
     height: 100%;
+    width: 100%;
+    margin: auto auto;
 }
 body {
     height: 100%;
-    width: 90%;
-    max-width: 1900px;
+    width: 100%;
     flex-direction: column;
     background: #ffffff;
     margin: auto;
