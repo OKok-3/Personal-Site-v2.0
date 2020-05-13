@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/menu.css">
+    <link rel="stylesheet" href="../../css/card.css">
+    <link rel="stylesheet" href="../../css/subpages.css">
+    <link rel="stylesheet" href="../../css/preloader.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <title>daniel | personal website v2.0</title>
+
+    <style>
+        .container {
+            display: flex;
+            position: relative;
+            justify-content: space-around;
+            align-items: center;
+            height: 80%;
+            width: 100%;
+        }
+        .description {
+            font-size: 30px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader-container" id="preloader">
+        <div class="preloader" id="preloader-text">L</div>
+        <div class="preloader" id="preloader-text">o</div>
+        <div class="preloader" id="preloader-text">a</div>
+        <div class="preloader" id="preloader-text">d</div>
+        <div class="preloader" id="preloader-text">i</div>
+        <div class="preloader" id="preloader-text">n</div>
+        <div class="preloader" id="preloader-text">g</div>
+        <div class="preloader" id="preloader-text">.</div>
+        <div class="preloader" id="preloader-text">.</div>
+        <div class="preloader" id="preloader-text">.</div>
+    </div>
+
+    <nav>
+        <!-- Mobile Hamburger Button -->
+        <button class="hamburger" id="mobile-menu" onclick="showMenu()">
+            <div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </button>
+        <!-- Menu Items -->
+        <div class="nav-links-wrapper" id="nav-links-wrapper">
+            <ul class="nav-links">
+                <div class="status-container" id="mobile-menu">
+                    <p class="status" id="nav-animation-wrapper">Looking For Internships</p>
+                </div>
+                <div id="nav-animation-wrapper">
+                    <li class="nav-link"><a rel="preload" href="../../index.html" class="link">Home</a></li>
+                </div>
+                <div class="active-wrapper" id="nav-animation-wrapper">
+                    <li class="nav-link"><a rel="preload" href="../../subpages/projects.html"
+                            class="link active_link">Projects</a></li>
+                </div>
+                <div id="nav-animation-wrapper">
+                    <li class="nav-link"><a rel="preload" href="../../subpages/experiences.html"
+                            class="link">Experiences</a>
+                    </li>
+                </div>
+                <div id="nav-animation-wrapper">
+                    <li class="nav-link"><a rel="preload" href="../../subpages/more_about_me.html" class="link">About
+                            Me</a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="description" id="subpage-desc">
+            Sorry, this project's description is currently not available...
+        </div>
+    </main>
+</body>
+
+</html>
+<script src="../../js/animations.js"></script>
