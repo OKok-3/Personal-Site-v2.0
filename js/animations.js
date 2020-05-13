@@ -1,28 +1,45 @@
-// Landing animations for menu and main texts
+// To animate the Preloading text
 document.addEventListener("DOMContentLoaded", function() {
+  var tl_1 = gsap.timeline({repeat: -1});
+  tl_1.to("#preloader-text", {duration: 1, ease: "elastic.inOut(1, 0.5)", stagger: 0.05, y: 10});
+  tl_1.to("#preloader-text", {duration: 1, ease: "elastic.inOut(1, 0.5)", stagger: 0.05, y: 0});
+});
+
+window.addEventListener("load", function() {
   if (window.innerWidth >= 1400) {
-    desktopLandingAnimation();
-    gsap.to(".main-text-wrapper", {duration: 5, ease: "elastic.inOut(3, 1)", y:"-20%", stagger: 0.2, repeat: -1, yoyo: true, delay: 5});
-    gsap.to(".sub-content", {duration: 10, ease: "elastic.inOut(3, 1)", y:"-1%", stagger: 0.2, repeat: -1, yoyo: true, delay: 5});
+    gsap.to(".preloader-container", {delay: 0.5, duration: 0.5, opacity: 0, onComplete: desktopLandingAnimation()});
   } else {
-    mobileLandingAnimation();
-    gsap.to(".main-text-wrapper", {duration: 5, ease: "elastic.inOut(3, 1)", y:"-20%", stagger: 0.2, repeat: -1, yoyo: true, delay: 5}, 1);
+    gsap.to(".preloader-container", {delay: 0.5, duration: 0.5, opacity: 0, onComplete: mobileLandingAnimation()});
   }
-  gsap.from("#subpage-desc", {duration: 3, ease: "elastic.out(0.6, 0.5)", y: 100, opacity: 0.015, delay: 0.5, stagger: 0.2});
-  gsap.from(".card-wrapper", {duration: 3, ease: "elastic.out(0.6, 0.5)", y: 100, opacity: 0.01, delay: 1, stagger: 0.2});
+  // Card Animations
+  var tl_w = gsap.timeline({delay: 1})
+  tl_w.from("#subpage-desc", {duration: 3, ease: "elastic.out(0.6, 0.5)", y: 100, opacity: 0.01, stagger: 0.2}, 1);
+  tl_w.from(".card-wrapper", {duration: 3, ease: "elastic.out(0.6, 0.5)", y: 100, opacity: 0.01, stagger: 0.2}, 1.5);
 });
 
 
 function desktopLandingAnimation() {
-  gsap.from(".main-text-wrapper", {duration: 3, ease: "elastic.out(0.6, 0.5)", y: 100, opacity: 0.015, delay: 0.5, stagger: 0.2});
-  gsap.from("#nav-animation-wrapper", {duration: 3, ease: "elastic.out(0.6, 0.5)", y: -100, opacity: 0.015, stagger: 0.2});
-  gsap.from(".sub-content", {duration: 3, opacity: 0.015, ease: "elastic.out(0.6, 0.7)", y:-400, delay: 0.5});
+  var tl_d = gsap.timeline()
+  // Menu Button Animations
+  tl_d.from("#nav-animation-wrapper", {duration: 3, ease: "elastic.out(0.6, 0.5)", y: -100, opacity: 0.015, stagger: 0.2, onComplete: disable_preloader()}, 1);
+  // For the texts
+  tl_d.from(".main-text-wrapper", {duration: 3, ease: "elastic.out(0.6, 0.5)", y: 100, opacity: 0.015, stagger: 0.2, delay: 0.3}, 1);
+  // For sub contents
+  tl_d.from(".sub-content", {duration: 3, opacity: 0.001, ease: "elastic.out(0.6, 0.7)", y:-400, delay: 0.3}, 1.5);
 }
 
 function mobileLandingAnimation() {
-  gsap.from(".main-text-wrapper", {duration: 3, ease: "elastic.out(0.6, 0.5)", y: 100, opacity: 0.015, delay: 0.5, stagger: 0.2});
-  gsap.from(".hamburger", {duration: 3, ease: "elastic.out(0.6, 0.5)", y: -100, opacity: 0.015});
-  gsap.from(".sub-content", {duration: 0.5, opacity: 0.015, delay: 1});
+  var tl_m = gsap.timeline({delay: 1});
+  // Menu Button Animations
+  tl_m.from(".hamburger", {duration: 3, ease: "elastic.out(0.6, 0.5)", y: -100, opacity: 0.015, onComplete: disable_preloader()}, 1);
+  // For index page main texts
+  tl_m.from(".main-text-wrapper", {duration: 3, ease: "elastic.out(0.6, 0.5)", y: 100, opacity: 0.015, delay: 0.5, stagger: 0.2}, 1);
+  // For sub contents
+  tl_m.from(".sub-content", {duration: 0.5, opacity: 0.015}, 2);
+}
+
+function disable_preloader() {
+  gsap.set("#preloader", {zIndex: -1});
 }
 
 // Mobile Menu Animation for Hiding and Revealing Menu List

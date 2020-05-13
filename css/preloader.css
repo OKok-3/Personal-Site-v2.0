@@ -9,14 +9,8 @@
     display: flex;
     align-items: center;
 }
-.preloader {
+#preloader-text {
     font-size: 50px;
     font-family: 'Playfair Display', serif;
     letter-spacing: 10px;
-}
-
-.preload-finished {
-    display: none;
-    z-index: -99;
-    pointer-events: none;
 }
