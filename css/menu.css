@@ -33,10 +33,12 @@ nav {
     left: 1.5%;
 }
 .status {
+    text-decoration: none;
     font-family: 'Jost', sans-serif;
+    color: black;
     font-size: 20px;
     opacity: 0.2;
-    z-index: -1;
+    z-index: 1;
 }
 
 /* Distinguishes which page the user is on */
@@ -61,6 +63,20 @@ nav {
     transition: all 1.5s ease-out;
 }
 #nav-animation-wrapper:hover:before {
+    width: 100%;
+    transition: all 0.5s ease-out;
+}
+.status:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.2);
+    transition: all 1.5s ease-out;
+}
+.status:hover:before {
     width: 100%;
     transition: all 0.5s ease-out;
 }

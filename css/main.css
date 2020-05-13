@@ -217,6 +217,7 @@ body {
     }
     .main-text-container {
         top: 50%;
+        width: 95%;
     }
     .sub-content {
         display: none;
