@@ -70,9 +70,6 @@ nav {
     visibility: hidden;
 }
 
-/* Ultrawide Optimization */
-
-
 /* Mobile Optimization */
 @media only screen and (max-width: 1400px) {
    .hamburger {

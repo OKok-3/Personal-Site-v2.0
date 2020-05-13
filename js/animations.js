@@ -16,8 +16,8 @@ window.addEventListener("load", function () {
     gsap.to(".preloader-container", { delay: 0.5, duration: 0.5, opacity: 0, onComplete: mobileLandingAnimation() });
     // Card Animations
     var tl_w = gsap.timeline({ delay: 1 })
-    tl_w.from("#subpage-desc", { duration: 3, ease: "elastic.out(0.6, 0.5)", y: 100, opacity: 0.01, stagger: 0.2 }, 1);
-    tl_w.from(".card-wrapper", { duration: 2, opacity: 0, stagger: 0.3 }, 1.5);
+    tl_w.from("#subpage-desc", { duration: 3, ease: "elastic.out(0.6, 0.5)", y: 100, opacity: 0, stagger: 0.2 }, 1);
+    tl_w.from(".card-wrapper", { duration: 2, ease: "elastic.out(0.8, 1)", y: 100, opacity: 0, stagger: 0.2 }, 1.5);
   }
 });
 
