@@ -19,8 +19,7 @@ window.addEventListener("load", function () {
     tl_w.from("#subpage-desc", { duration: 3, ease: "elastic.out(0.6, 0.5)", y: 100, opacity: 0, stagger: 0.2 }, 1);
     tl_w.from(".card-wrapper", { duration: 2, ease: "elastic.out(0.8, 1)", y: 100, opacity: 0, stagger: 0.2 }, 1.5);
   }
-  gsap.to(".status", { duration: 1.5, opacity: 1, repeat: -1, yoyo: true });
-
+  gsap.to(".linkedin_logo", {duration: 1, ease: "elastic.out(0.6, 0.5)", y: -5, yoyo: true, repeat: -1, delay: 5});
   // For the "i-p" pages like personal_sites.html
   gsap.from("#i-p_text_animation", {duration: 2, opacity: 0, ease: "elastic.out(0.6, 0.5)", y: 100, opacity: 0, stagger: 0.1, delay: 1.5});
 });
