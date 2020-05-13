@@ -53,6 +53,10 @@
     .subpage-content-container {
         margin: 19px;
     }
+    .exp-subpage-content-container {
+        transform: scale(0.92);
+        margin: 0;
+    }
 }
 /* Optimization for smaller tablets */
 @media only screen and (max-width: 1112px) {

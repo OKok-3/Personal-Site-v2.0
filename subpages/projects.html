@@ -29,7 +29,7 @@
 
     <nav>
         <!-- Mobile Hamburger Button -->
-        <button class="hamburger" onclick="showMenu()">
+        <button class="hamburger" id="mobile-menu" onclick="showMenu()">
             <div>
                 <div class="line"></div>
                 <div class="line"></div>
@@ -39,6 +39,9 @@
         <!-- Menu Items -->
         <div class="nav-links-wrapper" id="nav-links-wrapper">
             <ul class="nav-links">
+                <div class="status-container" id="mobile-menu">
+                    <p class="status" id="nav-animation-wrapper">Looking For Internships</p>
+                </div>
                 <div id="nav-animation-wrapper">
                     <li class="nav-link"><a rel="preload" href="../index.html" class="link">Home</a></li>
                 </div>
@@ -46,10 +49,12 @@
                     <li class="nav-link"><a rel="preload" href="../subpages/projects.html" class="link active_link">Projects</a></li>
                 </div>
                 <div id="nav-animation-wrapper">
-                    <li class="nav-link"><a rel="preload" href="../subpages/experiences.html" class="link">Experiences</a></li>
+                    <li class="nav-link"><a rel="preload" href="../subpages/experiences.html" class="link">Experiences</a>
+                    </li>
                 </div>
                 <div id="nav-animation-wrapper">
-                    <li class="nav-link"><a rel="preload" href="../subpages/more_about_me.html" class="link">About Me</a></li>
+                    <li class="nav-link"><a rel="preload" href="../subpages/more_about_me.html" class="link">About Me</a>
+                    </li>
                 </div>
             </ul>
         </div>

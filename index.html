@@ -28,9 +28,8 @@
     </div>
 
     <nav>
-
         <!-- Mobile Hamburger Button -->
-        <button class="hamburger" onclick="showMenu()">
+        <button class="hamburger" id="mobile-menu" onclick="showMenu()">
             <div>
                 <div class="line"></div>
                 <div class="line"></div>
@@ -40,7 +39,7 @@
         <!-- Menu Items -->
         <div class="nav-links-wrapper" id="nav-links-wrapper">
             <ul class="nav-links">
-                <div class="status-container">
+                <div class="status-container" id="mobile-menu">
                     <p class="status" id="nav-animation-wrapper">Looking For Internships</p>
                 </div>
                 <div class="active-wrapper" id="nav-animation-wrapper">
@@ -108,4 +107,5 @@
 </body>
 
 </html>
+
 <script src="../js/animations.js"></script>
