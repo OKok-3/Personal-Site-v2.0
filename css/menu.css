@@ -33,6 +33,7 @@ nav {
     left: 1.5%;
 }
 .status {
+    cursor: pointer;
     text-decoration: none;
     font-family: 'Jost', sans-serif;
     color: black;
@@ -102,6 +103,7 @@ nav {
         height: 50px;
         border-radius: 50%;
         cursor: pointer;
+        box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.425);
         z-index: 11;
    }
    .line {
@@ -115,15 +117,6 @@ nav {
    }
    .nav-links-wrapper {
        visibility: hidden;
-   }
-   .status-container {
-       visibility: visible;
-       position: absolute;
-       top: 30px;
-       left: 10%;
-   }
-   .status {
-       font-size: 15px;
    }
    .nav-links {
         position: fixed;

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/menu.css">
+    <link rel="stylesheet" href="../../css/preloader.css">
+    <link rel="stylesheet" href="../../css/project_page.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <title>daniel | personal website v2.0</title>
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader-container" id="preloader">
+        <div class="preloader" id="preloader-text">L</div>
+        <div class="preloader" id="preloader-text">o</div>
+        <div class="preloader" id="preloader-text">a</div>
+        <div class="preloader" id="preloader-text">d</div>
+        <div class="preloader" id="preloader-text">i</div>
+        <div class="preloader" id="preloader-text">n</div>
+        <div class="preloader" id="preloader-text">g</div>
+        <div class="preloader" id="preloader-text">.</div>
+        <div class="preloader" id="preloader-text">.</div>
+        <div class="preloader" id="preloader-text">.</div>
+    </div>
+
+    <nav>
+        <!-- Mobile Hamburger Button -->
+        <button class="hamburger" id="mobile-menu" onclick="showMenu()">
+            <div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </button>
+        <!-- Menu Items -->
+        <div class="nav-links-wrapper" id="nav-links-wrapper">
+            <ul class="nav-links">
+                <div class="status-container" id="mobile-menu">
+                    <p class="status" id="nav-animation-wrapper">Looking For Internships</p>
+                </div>
+                <div id="nav-animation-wrapper">
+                    <li class="nav-link"><a rel="preload" href="../../index.html" class="link">Home</a></li>
+                </div>
+                <div class="active-wrapper" id="nav-animation-wrapper">
+                    <li class="nav-link"><a rel="preload" href="../../subpages/projects.html"
+                            class="link active_link">Projects</a></li>
+                </div>
+                <div id="nav-animation-wrapper">
+                    <li class="nav-link"><a rel="preload" href="../../subpages/experiences.html"
+                            class="link">Experiences</a>
+                    </li>
+                </div>
+                <div id="nav-animation-wrapper">
+                    <li class="nav-link"><a rel="preload" href="../../subpages/more_about_me.html" class="link">About
+                            Me</a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="individual_proj_container">
+        <h1 class="i-p_title" id="i-p_text_animation">
+            Personal Site v2.0
+        </h1>
+        <div class="i-p_content_wrapper">
+            <h3 class="i-p_stage_heading" id="i-p_text_animation">Stage 1</h3>
+            <ul class="i-p_stages">
+                <li class="i-p_stage" id="i-p_text_animation">General design of the outline of the website</li>
+                <li class="i-p_stage" id="i-p_text_animation">Structure construction</li>
+                <li class="i-p_stage" id="i-p_text_animation">Basic CSS styling and animations</li>
+                <li class="i-p_stage" id="i-p_text_animation">Filling in the contens</li>
+            </ul>
+            <p class="i-p_content" id="i-p_text_animation">
+                Consider this stage as my learning process for HTML, CSS, and Javascript. Since I have just picked up the
+                languages right before I started this project.
+                There was a previous version of this website (v0.0), however, the website structure was a little bit messy so I
+                deleted all the files and redesigned the
+                entire structure and a little change of design for the cards. Unfortunately I did not separate the very
+                first version of the website stage 0
+                of the website, as I didn't really anticipate anyone would be interested in that. But, if you'd like to
+                see them, the files for that version
+                should be before commit 9 of the project.
+            </p>
+            <h2 class="i-p_subheading" id="i-p_text_animation">Design Process</h2>
+            <p class="i-p_content" id="i-p_text_animation">
+                For the initial design process, I used Sketch, a UI/UX design application on mac. As this is my first
+                real world project, besides a few learning
+                projects learning the languages, I only drew out a very simple design using Sketch. So some of the
+                design you see here are probably not reflected
+                on the Sketch design.
+            </p>
+            <img class="i-p_img"  id="i-p_text_animation" src="../../resources/v1/Resources/website_sketch_01.png" alt="design_01.jpg">
+            <p class="i-p_content" id="i-p_text_animation">
+                Currently I have finished structuring the website, did some basic CSS styling, and put in almost all the
+                contents. This project will probably be put
+                aside for awhile until my summer session finishes. Below are the stages for this project that I planned.
+            </p>
+            <h3 class="i-p_stage_heading" id="i-p_text_animation">Stage 2</h3>
+            <ul class="i-p_stages">
+                <li class="i-p_stage" id="i-p_text_animation">Javascript animation (GSAP used for this project)</li>
+                <li class="i-p_stage" id="i-p_text_animation">Adjusting stylings for the entire website</li>
+                <li class="i-p_stage" id="i-p_text_animation">Refinded user experience (i doubt there would be any but anyways)</li>
+                <li class="i-p_stage" id="i-p_text_animation">Improves the website's scalability</li>
+            </ul>
+            <p class="i-p_content" id="i-p_text_animation">I would consider this stage as a successful one. I summarized all the
+                mistakes I made previously while designing the v1.0 of the site, and completely changed the design
+                language for this version. I wouldn't say that this project is perfect, but it is miles better than
+                my first attempt at coding CSS, HTML, and Javascript.</p>
+            <h2 class="i-p_subheading" id="i-p_text_animation">Design Process</h2>
+            <p class="i-p_content" id="i-p_text_animation">For the second attempt, I decided not to draw out the entire website on Sketch,
+                the UI/UX design applicatin on macOS. Instead, I opted for the "design as you go" method, which was
+                proven very inefficient very soon as I started needing to recode the entire website as soon as I
+                change my mind on the layout of the website. Throughout the entire design/constructing phase, I
+                reconstructed the website at least 10 times (ouch). Part of it is because I changed my mind on the
+                styling, the other part is that I wasn't that familiar with HTML grid and flexbox structures, and I
+                ended switching back and forth constantly between the two to try to figure out which one is better. So
+                if I were to be given another chance at doing this project, I would design the project first before
+                coding anything.
+            </p>
+            <p class="i-p_content" id="i-p_text_animation">The majority of the site uses the "flex" CSS display property as a way to
+                automatically layout the HTML elements. There are some places that saw extensive use of grid, such as
+                the landing page "index.html" uses grid to split the screen in two parts to show the current project and
+                the slogan. Another place is the CSS cards you see in the projects page and the experiences page. I made
+                the decision to use flexbox to style the website based on the ease of use of the flex property and its
+                ability to dynamically adjust based on the client's window size.</p>
+            <div class="i-p_img_wrapper">
+                <img src="../../resources/backgrounds/personal_site_images/landing_grid.png" alt="" class="i-p_img" id="i-p_text_animation">
+                <img src="../../resources/backgrounds/personal_site_images/card_grid.png" alt="" class="i-p_img" id="i-p_text_animation">
+            </div>
+            <h2 class="i-p_subheading" id="i-p_text_animation">Lessons Learnt</h2>
+            <p class="i-p_content" id="i-p_text_animation">As proven by this project, prototyping beforehand improves time and efficiency by a
+                large margin. So for my future projects, they will always be drawn out if they are frontend
+                applications, or be logically designed first on a piece of paper or mindmap if they are backend
+                algorithms or databases. Some styling for the website are not perfect, and I decided not to change them
+                because it will require too much work and almost all of them are hardly noticeable. Most of the issues I
+                had laying out the HTML elements are the div elements will sometimes be taller or wider than the window
+                size of the client. As of today, I am still not quite sure why it happens, and my speculation now
+                remains that the website's overall structure needs to be redesigned to suit my needs. It will be
+                improved and looked at again during stage 3 of this project.</p>
+            <h3 class="i-p_stage_heading" id="i-p_text_animation">Stage 3</h3>
+            <ul class="i-p_stages">
+                <li class="i-p_stage" id="i-p_text_animation">More advanced Javascript animations and functions</li>
+                <li class="i-p_stage" id="i-p_text_animation">Flask backend support for scalability, databse, and reduced HTML file length (for
+                    code readability)</li>
+                <li class="i-p_stage" id="i-p_text_animation">MySQL database integration</li>
+                <li class="i-p_stage" id="i-p_text_animation">Finishing touches ;)</li>
+            </ul>
+        </div>
+    </main>
+</body>
+
+</html>
+<script src="../../js/animations.js"></script>

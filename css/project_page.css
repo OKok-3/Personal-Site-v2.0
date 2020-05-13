@@ -1,0 +1,71 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+
+/* Global settings */
+.i-p_content_wrapper {
+    position: relative;
+    width: 65%;
+    margin: 0 auto;
+}
+.i-p_title, .i-p_stage_heading, .i-p_subheading {
+    font-family: 'Crimson Text', serif;
+    margin: 15px;
+}
+.i-p_stage, .i-p_content {
+    font-family: 'Slabo 27px', serif;
+    font-size: 19px;
+}
+
+
+.i-p_stage_heading {
+    margin-top: 30px;
+    font-size: 35px;
+}
+.i-p_subheading {
+    text-align: center;
+    font-size: 30px;
+}
+.i-p_stage {
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+.i-p_content {
+    margin-left: 10px;
+}
+.i-p_title {
+    text-align: center;
+    font-size: 40px;
+}
+.i-p_img {
+    position: relative;
+    max-width: 100%;
+    transform: scale(0.95);
+    margin: auto;
+}
+.i-p_img_wrapper {
+    position: relative;
+    width: 95%;
+    margin: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: 0.75fr 0.25fr;
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 420px) {
+    .i-p_content_wrapper {
+        position: relative;
+        width: 95%;
+        margin: 0 auto;
+    }
+    .i-p_stage, .i-p_content {
+        font-size: 16px;
+    }
+    .i-p_title {
+        font-size: 30px;
+    }
+    .i-p_subheading, .i-p_stage_heading {
+        font-size: 25px;
+    }
+}

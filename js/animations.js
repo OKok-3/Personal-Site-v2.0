@@ -20,6 +20,9 @@ window.addEventListener("load", function () {
     tl_w.from(".card-wrapper", { duration: 2, ease: "elastic.out(0.8, 1)", y: 100, opacity: 0, stagger: 0.2 }, 1.5);
   }
   gsap.to(".status", { duration: 1.5, opacity: 1, repeat: -1, yoyo: true });
+
+  // For the "i-p" pages like personal_sites.html
+  gsap.from("#i-p_text_animation", {duration: 2, opacity: 0, ease: "elastic.out(0.6, 0.5)", y: 100, opacity: 0, stagger: 0.1, delay: 1.5});
 });
 
 
@@ -40,7 +43,7 @@ function mobileLandingAnimation() {
   // For index page main texts
   tl_m.from(".main-text-wrapper", { duration: 3, ease: "elastic.out(0.6, 0.5)", y: 100, opacity: 0.015, delay: 0.5, stagger: 0.2 }, 1);
   // For sub contents
-  tl_m.from(".sub-content", { duration: 1, opacity: 0.015, delay: 0.5 }, 3);
+  tl_m.from(".sub-content", { duration: 1, opacity: 0.015}, 1);
   disable_preloader()
 }
 
@@ -57,6 +60,7 @@ function showMenu() {
     tl.to(".sub-content", { duration: 1, opacity: 1 }, 2);
     tl.to(".subpage-content-container", { duration: 0.2, opacity: 1 }, 1);
     tl.to(".exp-subpage-content-container", { duration: 0.2, opacity: 1 }, 1);
+    tl.to(".i-p_img", { duration: 0.2, opacity: 1 }, 1);
   } else {
     navLinks.style.visibility = 'visible';
     navLinks.style.opacity = 0.0;
@@ -66,5 +70,6 @@ function showMenu() {
     tl.to(".sub-content", { duration: 0.1, opacity: 0 }, 1);
     tl.to(".subpage-content-container", { duration: 0.2, opacity: 0 }, 1);
     tl.to(".exp-subpage-content-container", { duration: 0.2, opacity: 0 }, 1);
+    tl.to(".i-p_img", { duration: 0.2, opacity: 0 }, 1);
   }
 }
