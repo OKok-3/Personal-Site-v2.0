@@ -125,6 +125,10 @@ nav {
    .link {
        color: white;
    }
+   .status-container {
+       display: none;
+       z-index: -99;
+   }
    .nav-links-wrapper {
        visibility: hidden;
    }
