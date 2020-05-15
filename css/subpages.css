@@ -23,7 +23,7 @@
 /* Different setting for experiences page */
 .exp-subpage-content-container {
     position: relative;
-    height: 660px;
+    height: 550px;
     flex-basis: 350px;
     margin: 30px;
 }
