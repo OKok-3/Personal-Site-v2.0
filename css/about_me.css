@@ -1,0 +1,77 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.aboutme-container {
+    position: relative;
+    height: 80%;
+    width: 95%;
+    /* For Ultrawides */
+    max-width: 2100px;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    margin: 0 auto;
+}
+
+.slogan {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.aboutme-texts {
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+.skillbars {
+    position: relative;
+    width: 80%;
+    padding: 20px 0px;
+    max-width: 550px;
+    margin-left: auto;
+    background: #262626;
+    box-shadow: 5px 5px 20px rgba(100, 100, 100, 0.534);
+}
+
+.skillbox {
+    position: relative;
+    box-sizing: border-box;
+    width: 90%;
+    margin: 15px auto;
+}
+.skillbars h3 {
+    position: relative;
+    color: white;
+    width: 90%;
+    margin: 0px auto;
+    font-family: 'Lora', serif;
+}
+.skillbox p {
+    color: white;
+    text-transform: uppercase;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Titillium Web', sans-serif;
+}
+.skillbox p:nth-child(1) {
+    display: inline-block;
+    width: auto;
+}
+.skillbox p:nth-child(2) {
+    float: right;
+}
+
+.skillbar {
+    padding: 2px;
+    box-sizing: border-box;
+    border: 1.5px solid #0dd89b;
+    border-radius: 2px;
+}
+
+.skill-level {
+    background: #0dd89b;
+    position: relative;
+    width: 99%;
+    height: 10px;
+}
